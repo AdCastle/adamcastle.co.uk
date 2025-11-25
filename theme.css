@@ -44,6 +44,9 @@ p {
   font-size: 25px;
   color: #f2b7bd;
 }
+.lead.font-normal {
+  font-weight: bold;
+}
 .abort .content .lead .font-normal {
   color: #ffffff;
 }
