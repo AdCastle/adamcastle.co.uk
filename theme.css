@@ -2,8 +2,12 @@
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  color: #ffffff;
-  background: #bc2131;
+  color: #000;
+  background: #167ac669;
+}
+
+.container {
+  background: #dae9f6;
 }
 h1,
 h2,
@@ -13,6 +17,9 @@ h5,
 h6 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
+}
+h1 {
+   margin-top: 0.5em;
 }
 p {
   font-weight: 300;
@@ -26,9 +33,6 @@ p {
 .font-bold {
   font-weight: 700;
 }
-.abort {
-  margin-top: 15px;
-}
 .abort .content {
   margin-left: 10px;
 }
@@ -38,17 +42,17 @@ p {
 }
 .abort .content h1 .smaller {
   font-size: 40px;
-  color: #f2b7bd;
+  color: #000;
 }
 .abort .content .lead {
   font-size: 25px;
-  color: #f2b7bd;
+  color: #000;
 }
 .lead.font-normal {
   font-weight: bold;
 }
 .abort .content .lead .font-normal {
-  color: #ffffff;
+  color: #000;
 }
 .abort .links {
   float: right;
@@ -77,11 +81,17 @@ p {
 }
 
 .abort a {
-  color: #fff;
+  color: #000;
   border-bottom: 1px solid #eee;
 }
+
+.summary a {
+  color: #ccc;
+
+}
+
 a:hover {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   border-bottom: 1px solid #ccc;
 }
@@ -186,7 +196,7 @@ header a {
 
 
 article {
-    background: #000;
+    background: #888;
     color: #fff;
     padding: 1em;
     margin-bottom: 1em;
