@@ -86,7 +86,7 @@ p {
 }
 
 .summary a {
-  color: #ccc;
+  color: #ddd;
 
 }
 
@@ -194,6 +194,10 @@ header a {
     width: 100%
 }
 
+.row {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.5em;
+}
 
 article {
     background: #888;
