@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The cognitive concerns with AI development tools, I have to now understand I'm an orchestrator (of many things)">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <title>The cognitive concerns with AI development tools - Adam Castle</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this scaffold -->
+    <link href="../theme.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5S604GVT0"></script>
+
+    <script>
+
+          window.dataLayer = window.dataLayer ||[];
+          function gtag(){dataLayer.push(arguments);}  gtag('js', new Date()); gtag('config', 'G-V5S604GVT0');
+
+    </script>
+
+</head>
+
+<body>
+<header><a href="../index.html"><span class="typed">Abort, Retry, Fail?</span><span class="cursor" aria-hidden="true">_</span></a></header>
+
+<div class="abort">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <article>
+                    <h1><span class="font-semi-bold">The cognitive concerns with AI development tools, I have to now understand I'm an orchestrator (of many things)</span></h1>
+                    <p><time datetime="2026-09-19">September 19, 2026</time></p>
+
+                    <p>On the train the other day I was reading the <a href="https://www.gitclear.com/the_ai_code_quality_maintainability_gap">GitClear report</a> about tech debt and code churn going through the roof and it really made me think. My gut reaction was to think about those codebases turning into massive unmanageable and unmaintainable systems. But then I started to think: it probably doesn't even matter anymore and I probably need to adapt.</p>
+
+                    <p>From the age of 8 I’ve been writing code, back then on my 286, but also 4 years at uni, an A- level and a BTEC all in software development, then for 25 years where I’ve spent my career learning how to build software one way. I probably wasn’t the greatest developer but I feel that I learned all the proper design patterns, clean code, manual fixes, and strict code reviews, and I know that some care more about compliance and security but a key element was that our craft was sound.</p>
+
+                    <p>Over the years, big shifts came along, like DevOps / Shift left or moving to the cloud or doing Scrum and we just adapted. But those changes were slow burners. They gave us years to digest things and tweak our way of thinking.</p>
+
+                    <p>AI is a totally different kettle of fish. There’s so many changes and AI developments are moving so fast it makes my head spin if I try to keep up, therefore, I think the challenges are more related to the people than the tech.</p>
+
+                    <p>Proper shifts are happening every single day now, and it's giving everyone change fatigue. But we're trying to use ten-year-old habits in a setup that changes every time you open your laptop.</p>
+
+                    <p>We’re still learning the new norm and I don’t think most people are doing it 100% right, there’s no new golden path. I see that everyone seems tired as people try to keep up but also take on even more context and cognitive load. There are platforms being built to help with this (hint to <a href="https://www.linkedin.com/company/comper/">Comper</a> ;)) but I see that everyone often tries to take the burden of trying to keep up by keeping the things all in their own mind.</p>
+
+                    <p>This is different though, depending on how you and your business are treating AI</p>
+
+                    <ul>
+                        <li>Going All-In: Firms that completely rebuild their engineering setups around AI agents, automated checks, and proper orchestration are flying along and building stuff that actually works. Think of Anthropic and their Agentic SDLC suggestions</li>
+                        <li>Not Going In At All: Places that stick strictly to the previous, non-agentic development ways can still do fine. They might move a bit slower, but everyone knows where they stand and nobody's getting lost. The previous pains will exist but there's long established processes to handle them</li>
+                        <li>Going Half-In: Using AI development tools, but keeping the same way of working and structure - Right, this is where it goes properly pear-shaped.</li>
+                    </ul>
+
+                    <p>In the “Half-in stage” “the business” expects everyone in product and engineering to churn out code at a faster velocity, but it's not always happening as we get dragged through new bottlenecks caused by old ways of working. Whether it's manually reviewing 100 PRs or setting up alignment meetings for a feature that is already being shipped. It’s really like trying to hold back the tide with a teaspoon. I think many people aren’t thinking about what their working hours are now as AI agents don't clock off at 17:00, they run 24/7, relentlessly churning stuff out, and the real head-doer is the mental strain of trying to keep up with that relentless, sleepless pace.</p>
+
+                    <p>Part of me feels that we're sitting on a ticking time bomb. If we don't sort it out, we're gonna feel the full weight of this problem in about a year's time. It might show up as massive worker burnout, or our tech going completely down with brittle software and constant fires to put out.</p>
+
+                    <p>There will be incidents and outages, pain will be felt there and most probably those affected will probably have AI loops to fix these, the people's side of things will be different though.</p>
+
+                    <p>I’ve always seen that people are resilient. Maybe we will adapt. Maybe next year we'll get proper tools built to manage and audit AI-generated code at scale, taking the human bottleneck out of the equation (second hint).</p>
+
+                    <p>Until those are used, the main issue isn't the tech itself.</p>
+
+                    <p>If you find yourself in this position then here’s some thoughts on how to address</p>
+
+                    <ul>
+                        <li>Recognise how your own role has evolved. You're no longer just writing code line-by-line; you're acting as an architect, an orchestrator, or a puppet master guiding AI agents. I’m seeing that agentic development is much more linked to ant colonies and with that in mind when the colonies interact, sometimes they clash.</li>
+                        <li>Maintain empathy on a human level. Everyone is adapting at different speeds, and friction naturally arises when new ways of working collide with old habits.</li>
+                        <li>Practice radical transparency. Clearly and repeatedly communicate changes to workflows and expectations so the team stays aligned.</li>
+                        <li>Lean into asynchronous documentation, continuous context and understanding is key now. While building software is faster than ever, it is crucial that decision-making remains clear. Ensure artifacts like Requests for Comments (RFCs) and Architecture Decision Records (ADRs) are developed asynchronously and transparently. This context is great for agents but also for humans, to stay aware of what is happening and why. This also helps address the fact that it’s never been so easy to build but make sure you’re building the right thing.</li>
+                        <li>Realize that it's probably your organizational structure or ways of working which are causing the cognitive friction and fragmentation. Call it out and If you can, try to adapt to the changing environment, but attempt to do this on a quarterly basis and consider the cool-down concept. It’s not easy but sticking with past structures is the main issue that I am seeing with how people are struggling .</li>
+                        <li>Finally, introduce dedicated "cool-down" periods between major shifts to give teams breathing room rather than immediately jumping onto the next hype cycle.</li>
+                    </ul>
+                </article>
+
+                <p><a href="index.html">&larr; All blog articles</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Is SaaS really dead?">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <title>Is SaaS really dead? - Adam Castle</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this scaffold -->
+    <link href="../theme.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5S604GVT0"></script>
+
+    <script>
+
+          window.dataLayer = window.dataLayer ||[];
+          function gtag(){dataLayer.push(arguments);}  gtag('js', new Date()); gtag('config', 'G-V5S604GVT0');
+
+    </script>
+
+</head>
+
+<body>
+<header><a href="../index.html"><span class="typed">Abort, Retry, Fail?</span><span class="cursor" aria-hidden="true">_</span></a></header>
+
+<div class="abort">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <article>
+                    <h1><span class="font-semi-bold">Is SaaS really dead?</span></h1>
+                    <p><time datetime="2026-08-28">August 28, 2026</time></p>
+
+                    <p>SaaS is dead is a hot topic as folks are suggesting that you just vibe-code your way to a custom stack with LLMs. It’s a catchy narrative, but is it realistic? Over the years I’ve been a firm "buy over build" advocate and I have to admit there are specific cracks in the SaaS model where building your own AI-generated alternative actually pays off.</p>
+
+                    <p>Specifically, two use cases make the trade-off worth it:</p>
+
+                    <h2>Overpriced, Static Enterprise Apps</h2>
+
+                    <p>If you’re paying 50k/year for legacy enterprise software whose feature set hasn’t meaningfully changed since 2018, vibe-coding an internal replacement is a no-brainer. When domain logic is static and a legacy vendor is just extracting rent for basic CRUD operations, build your own lightweight tool.</p>
+
+                    <h2>Early-Stage Startup Runway Mode</h2>
+
+                    <p>When cash is tight and runway is everything, paying €200/user/month for mid-market SaaS tools isn't viable. AI code generation allows early-stage teams to hack together temporary internal tools to get off the ground. Managing tech debt later is a great problem to have, survival today comes first.</p>
+
+                    <p>These go on top of the fact that having something truly custom is great as it fits your business needs like no other app… plus as engineers, we like to build things and this is fun too :)</p>
+
+                    <p>Outside of those cases? The Total Cost of Ownership (TCO) math is still there and nothing has changed in this regard. Swapping a mature, evolving SaaS platform for an AI-built app in a scaling company introduces hidden engineering tax that shows up a month into production.</p>
+
+                    <h2>You’re building a static snapshot, not continuous R&amp;D</h2>
+
+                    <p>Prompting an LLM clone of a tool that gives you what you need today based on what you currently know. It misses the continuous UX upgrades, compliance shifts, security patches, and edge-case fixes that specialized product teams deploy weekly. If you want to address it, then you will also have to maintain and update the product.</p>
+
+                    <h2>Senior dev rates destroy perceived savings</h2>
+
+                    <p>Replacing a €50/user/month SaaS tool feels like a win, until a senior engineer burns 4 hours debugging state management or an API schema change on an internal tool. The minute your engineering team touches it, the "free" app costs €600 in lost dev velocity.</p>
+
+                    <h2>You traded SaaS lock-in for AI orchestration lock-in</h2>
+
+                    <p>You aren’t maintaining traditional codebases anymore; you’re managing prompt loops, model dependencies, and LLM non-determinism just to keep the patch automated.</p>
+
+                    <h2>Your engineering team becomes the SLA</h2>
+
+                    <p>When third-party SaaS breaks, you check a status page. When your AI-generated internal app breaks, there is no support team, your devs drop core roadmap items to fix internal administrative utilities.</p>
+
+                    <h2>Integrations become fragmented</h2>
+
+                    <p>Distributed services and complexity means bespoke integrations. It's harder to get context from different tools and data models which don't easily connect to each other.</p>
+
+                    <h2>My rules</h2>
+
+                    <p>I’ve always had two clear rules that I use for guidance (and yes I have broken them), but they were; build if it's for core competitive advantage, buy everything else. But with the changes I have now added to my own rules:</p>
+
+                    <ul>
+                        <li><strong>Build</strong> if you're replacing stagnant, overpriced legacy software.</li>
+                        <li><strong>Build</strong> if you’re stretching the survival runway as a startup.</li>
+                        <li><strong>Build</strong> if it’s your core proprietary competitive advantage.</li>
+                        <li><strong>Buy</strong> for everything else so your engineering capacity stays focused on moving the actual business forward.</li>
+                    </ul>
+
+                    <p>But the truth is, I could be wrong, maybe in a year's time vibe coded copies of SaaS tools with continuous loops running to maintain them might stand the test of time, we will just have to wait and see and think about the various ROI figures.</p>
+
+                    <p>What's your thoughts? Are you copying apps and do you see any maintenance issues or is all ok?</p>
+                </article>
+
+                <p><a href="index.html">&larr; All blog articles</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
