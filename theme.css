@@ -187,3 +187,7 @@ iframe {
 /* leftover from old map page */
 .leaflet-popup-content-wrapper { color: #000; }
 #map { height: 800px; width: 100%; }
+
+figure { margin: 1.5em 0; max-width: 72ch; text-align: center; }
+figure img { max-width: min(100%, 420px); height: auto; border: 1px solid var(--line); }
+figcaption { color: var(--dim); margin-top: .5em; }

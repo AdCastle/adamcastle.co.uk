@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Workflows are the most underappreciated part of SaaS and now they are important to remember in an AI world">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <title>Workflows are the most underappreciated part of SaaS and now they are important to remember in an AI world - Adam Castle</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this scaffold -->
+    <link href="../theme.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5S604GVT0"></script>
+
+    <script>
+
+          window.dataLayer = window.dataLayer ||[];
+          function gtag(){dataLayer.push(arguments);}  gtag('js', new Date()); gtag('config', 'G-V5S604GVT0');
+
+    </script>
+
+</head>
+
+<body>
+<header><a href="../index.html"><span class="typed">Abort, Retry, Fail?</span><span class="cursor" aria-hidden="true">_</span></a></header>
+
+<div class="abort">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <article>
+                    <h1><span class="font-semi-bold">Workflows are the most underappreciated part of SaaS and now they are important to remember in an AI world</span></h1>
+                    <p><time datetime="2026-10-10">October 10, 2026</time></p>
+
+                    <p>Most people that have worked with me know that I love integrations, and I always see that there's a natural tendency in SaaS to believe that the best product wins.</p>
+
+                    <p>But that's simply not true. A single product rarely creates its full value on its own, the real value often comes from how well it connects to everything else a customer already uses (and loves) and makes their lives even better.</p>
+
+                    <p>I’ve always felt (in my own biased way) that workflows and integrations are among the most underappreciated parts of building a SaaS company. They're not the most exciting features to demo and they're probably not what gets a customer through the door in the first place. Yet they can be the very thing that makes a product indispensable and stickie.</p>
+
+                    <p>Think about Slack. To be honest, a place for people to chat isn't new. What makes it valuable is that work from all over the company flows into it. A developer gets a Jira notification, a salesperson sees a Salesforce update, the ops team gets an alert from some other system, and nobody has to keep jumping between ten different apps. Slack is worth more because of the other tools it connects to.</p>
+
+                    <h2>No SaaS product is an island</h2>
+
+                    <p>Most businesses don't run on one piece of software. They run on a whole ecosystem of tools, Salesforce for customers, Jira for engineering work, Slack for communication, GitHub for code and some finance platform for billing and reporting.</p>
+
+                    <p>Each one might be great at its own job, but the work doesn't stop where one product ends and the next begins. When the systems aren't connected, people become the integration layer. They copy and paste, chase updates, duplicate records and manually move work from one app to another. Connect the tools properly and a lot of that pain just goes away.</p>
+
+                    <p>I’m a big believer that the product is the interface and the workflow is the outcome. Customers don't pay for software so that they can have more software, they pay to get work done, and everyone works in a slightly different way.</p>
+
+                    <h2>Integrations are not new but maybe we’re forgetting that they’re there?</h2>
+
+                    <p>None of this started with Slack, or modern SaaS, or even APIs. Businesses have spent decades trying to get their systems to talk to each other. Back in the 1990s it even had its own name, Enterprise Application Integration (EAI). Then web services, REST APIs and the cloud came along and integration slowly became a normal part of building a product.</p>
+
+                    <p>Salesforce, Atlassian and others have built marketplaces that are now a key pillar of their business, but I don't think the lesson is that every SaaS company needs a marketplace. The lesson is that ecosystems make it easy for products to work together, and we have to remember that when we build bespoke products. An integration can be completely invisible to the end user and still be worth more than the shiny feature everyone can see.</p>
+
+                    <h2>Building an integration is easy. Building an integration platform is harder.</h2>
+
+                    <p>This is where I see a lot of SaaS companies underestimate the problem. Building one integration is pretty straightforward. Most products have an API, some docs and a way to authenticate, so a developer can connect two systems and start reading and writing data pretty quickly.</p>
+
+                    <p>The pain starts when you need more of them. Suddenly you're supporting different ways of authenticating, different permission models, different data structures, different API limits and different ways of handling errors… and then you've got a dependency risk upstream every time one of those APIs changes.</p>
+
+                    <p>If you want to do this properly, I think there are at least three layers you need to get right:</p>
+
+                    <ul>
+                        <li><strong>Authentication:</strong> how you securely connect to someone's account in another system. For the user it should just be a quick sign-in and a confirmation. Behind the scenes you're the one refreshing tokens, storing credentials safely and handling it when access gets revoked.</li>
+                        <li><strong>Authorization:</strong> authentication tells you who someone is, authorization tells you what they're allowed to do. Only ask for the data you need and respect the customer's permissions, otherwise sensitive information ends up in front of the wrong people.</li>
+                        <li><strong>Data mapping:</strong> every system structures its data differently. One app’s "task" is another app’s "issue", and custom fields are different in every single account. You need a flexible way to translate between them or you end up with a pile of one-off hacks.</li>
+                    </ul>
+
+                    <h2>What would your own integration platform look like?</h2>
+
+                    <p>If I was building an integration platform inside a SaaS product, I'd start with something simple. Here's a rough view of the main parts and how the data moves between them.</p>
+
+                    <figure>
+                        <img src="../css/integration-platform.jpg" alt="Flow diagram: your SaaS product calls an Integration API, which passes through an authentication layer (OAuth, tokens, secure credentials), an authorization layer (scopes, permissions, access policies) and a mapping layer (objects, fields, statuses, relations) to a sync and event engine handling webhooks, retries, rate limits and logging, which connects to Jira, Salesforce and other SaaS tools.">
+                        <figcaption>A simplified integration platform architecture</figcaption>
+                    </figure>
+
+                    <p>It's a simplified picture. In production you'd also need to think about monitoring, observability, keeping tenants isolated from each other, data reconciliation, API versioning and what happens when things fail.</p>
+
+                    <p>The thing to notice is that authentication, authorization and mapping sit in the middle, between your product and the external systems. They're shared, they aren't bolted onto each connector. If every integration has its own way of managing credentials, checking permissions and translating data, then the complexity grows with every connection you add. If they're built once as platform services, each new integration gets easier and cheaper to build and run, and that's really the whole point.</p>
+
+                    <h2>Why is this all important now? - because people are building their own tools with AI</h2>
+
+                    <p>There's a trend now of building bespoke products rather than adopting established platforms. I get it, it can save costs (short term) and you can build something that really fits your needs. Teams are building their own Jira, their own CRM or their own project management system.</p>
+
+                    <p>Aside from the long term maintenance cost, and the fact that your focus is no longer just on your own product, you'll probably have to build the unseen features that stuff like Jira is good at… its workflows. Making a ticketing system is pretty easy, but making it fully customisable and getting it to integrate with all of your other bespoke systems will be costly.</p>
+
+                    <p>It's important to remember that there are years of ecosystem development behind those tools, and if your new bespoke product doesn't support what you need, then you'll have to get your agents to build that too.</p>
+
+                    <p>This is where I feel the simplicity of building your own tool is misleading. The app itself might be straightforward, but the integrations around it can turn into an ongoing engineering commitment. You need to build the connectors, maintain them, handle security, and react when a third-party API changes or another new internal tool gets built. You also need to prioritise that work (or your tokens) against the features that make your product unique.</p>
+
+                    <p>Of course, not every bespoke app needs hundreds of integrations. But if it's meant to replace a central system, like Jira, then think about the integrations from the very beginning.</p>
+
+                    <h2>Should you build your own integration platform or use one?</h2>
+
+                    <p>If you need a growing number of customer-facing integrations there is another option, use a dedicated integration provider. Products like Merge give you a unified API, so you get access to lots of third-party platforms through one consistent interface, rather than building and maintaining every connector yourself.</p>
+
+                    <p>The saving on the first integration is nice, but the real saving is in the ongoing work of keeping lots of integrations alive as your product and your customers change. What you actually get depends on the provider and the category you're in.</p>
+
+                    <p>My view is that it's a trade-off between control and ongoing cost. Build directly against the third-party APIs when you only have a few critical integrations, you need very specific behaviour or you want full control of the experience, but accept that your team owns every update, every API change and every failure. Use a platform when your customers expect lots of integrations and maintaining them all would distract you from your core product, but accept that you're limited to what the provider supports and you're paying their pricing.</p>
+
+                    <p>Don't assume integrations are simple because the first prototype took a few days. Equally, don't assume you need an integration platform before you've even validated that customers want it. Build where it gives you a competitive advantage, and reuse or outsource where the work is necessary but doesn't make you different.</p>
+
+                    <h2>Integrations are a product strategy, not just an engineering task</h2>
+
+                    <p>The best integration strategies start with the workflows, not with a long list of requested connectors. Where do your customers spend their day? Where does the work come from, and where does it need to go next?</p>
+
+                    <p>If your customers (even internal customers) spend most of their time in Slack, one really good Slack integration is probably worth more than a dozen lower-priority connectors. If your product is for engineering teams, then code repositories, CI/CD and issue trackers are probably essential.</p>
+
+                    <p>The goal is for your product to fit naturally into what's already there. The best integrations make customers more effective, they don't make them more trapped.</p>
+
+                    <h2>The next generation of SaaS will be built around connected workflows first, not as an afterthought</h2>
+
+                    <p>All of this gets even more relevant as AI changes how software is built and used. Connecting machines to machines, rather than humans to apps, has to be the first thought and not an afterthought. Lots of companies are API first, plenty still aren't, and now they all need to be MCP first.</p>
+
+                    <p>But having the interface is one thing. The harder questions are: does the app have access to the right data? Can it work with the systems where the work already happens? Does it respect the permissions and rules of those systems? Can it reliably do things across them?</p>
+
+                    <p>An AI assistant that's stuck inside its own little world has very limited context. One that can securely pull information from a CRM, check an engineering ticket, look at the docs and kick off an approved workflow is far more useful. The same goes for traditional SaaS, the connected product will often beat the technically impressive but isolated one.</p>
+
+                    <p>I don't think the future is one app that replaces everything else. I think it's lots of specialised tools connected by workflows that get smoother and smoother, and the companies that make those connections work reliably will have a real advantage.</p>
+
+                    <h2>The value is in the connections</h2>
+
+                    <p>Whether you're building your own internal tools or a customer-facing SaaS product, it’s easy to focus on the flashy parts; the UI, the new features, or getting it to work like Jira. But it's the unseen workflows and integrations that make a product fit into how people actually work.</p>
+
+                    <p>As building software gets easier, fitting into what's already there gets more important. So the question isn't just what feature to build next, it's how you connect to the work your customers are already doing.</p>
+
+                    <p>Please don’t forget them, and maybe the integration platform part of this blog will help you.</p>
+                </article>
+
+                <p><a href="index.html">&larr; All blog articles</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
